@@ -110,7 +110,14 @@ function getPasswordOptions() {
 
   // Confirm whether to include special characters
   var includeSpecial = confirm("Include special characters?");
+
+  // Validate that at least one character type is selected
+  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+    alert("Please select at least one character type.");
+    return;
+  }
 }
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
