@@ -164,6 +164,11 @@ function generatePassword() {
     allChars = allChars.concat(specialCharacters);
     result.push(getRandom(specialCharacters));
   }
+
+  // Fill the remaining length with random characters from the selected types
+  for (var i = result.length; i < options.length; i++) {
+    result.push(getRandom(allChars));
+  }
 }
 
 // Get references to the #generate element
