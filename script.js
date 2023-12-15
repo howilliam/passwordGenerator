@@ -174,6 +174,9 @@ function generatePassword() {
   result = result.sort(function() {
     return Math.random() - 0.5;
   });
+
+  // Convert the result array to a string
+  return result.join('');
 }
 
 // Get references to the #generate element
