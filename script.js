@@ -116,6 +116,15 @@ function getPasswordOptions() {
     alert("Please select at least one character type.");
     return;
   }
+
+  // Return an object with selected options
+  return {
+    length: length,
+    includeLowercase: includeLowercase,
+    includeUppercase: includeUppercase,
+    includeNumeric: includeNumeric,
+    includeSpecial: includeSpecial
+  };
 }
 
 
