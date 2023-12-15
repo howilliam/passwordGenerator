@@ -93,6 +93,11 @@ function getPasswordOptions() {
   // Prompt for password length
   var length = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
 
+  // Validate password length
+  if (isNaN(length) || length < 8 || length > 128) {
+    alert("Please enter a valid password length between 8 and 128 characters.");
+    return;
+  }
 }
 
 // Function for getting a random element from an array
