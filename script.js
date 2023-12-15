@@ -169,6 +169,11 @@ function generatePassword() {
   for (var i = result.length; i < options.length; i++) {
     result.push(getRandom(allChars));
   }
+
+  // Shuffle the result array to mix up the character types
+  result = result.sort(function() {
+    return Math.random() - 0.5;
+  });
 }
 
 // Get references to the #generate element
