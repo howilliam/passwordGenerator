@@ -98,6 +98,18 @@ function getPasswordOptions() {
     alert("Please enter a valid password length between 8 and 128 characters.");
     return;
   }
+
+  // Confirm whether to include lowercase characters
+  var includeLowercase = confirm("Include lowercase characters?");
+
+  // Confirm whether to include uppercase characters
+  var includeUppercase = confirm("Include uppercase characters?");
+
+  // Confirm whether to include numeric characters
+  var includeNumeric = confirm("Include numeric characters?");
+
+  // Confirm whether to include special characters
+  var includeSpecial = confirm("Include special characters?");
 }
 
 // Function for getting a random element from an array
