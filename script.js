@@ -142,6 +142,28 @@ function generatePassword() {
     return ""; // User canceled or entered invalid input
   }
 
+  var allChars = [];
+  var result = [];
+
+  if (options.includeLowercase) {
+    allChars = allChars.concat(lowerCasedCharacters);
+    result.push(getRandom(lowerCasedCharacters));
+  }
+
+  if (options.includeUppercase) {
+    allChars = allChars.concat(upperCasedCharacters);
+    result.push(getRandom(upperCasedCharacters));
+  }
+
+  if (options.includeNumeric) {
+    allChars = allChars.concat(numericCharacters);
+    result.push(getRandom(numericCharacters));
+  }
+
+  if (options.includeSpecial) {
+    allChars = allChars.concat(specialCharacters);
+    result.push(getRandom(specialCharacters));
+  }
 }
 
 // Get references to the #generate element
